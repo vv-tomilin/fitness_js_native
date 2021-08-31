@@ -1,0 +1,17 @@
+# Корневой файл EditorConfig
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = false
+
+# Используем табы для отступов
+[*.js]
+indent_style = tab
+indent_size = 2
+
+[*.min.*]
+indent_style = ignore
+trim_trailing_whitespace = false
+insert_final_newline = ignore
