@@ -1,2 +1,4 @@
-@import './global/fonts.scss';
-@import './global/test';
+@import './global/_normalize';
+@import './global/_global';
+@import './global/variables';
+@import './global/_fonts';
