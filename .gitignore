@@ -1,2 +1,11 @@
-node_modules
-/dist
+.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+css/*.css
+node_modules/
+fitness_js_native/
+Thumbs.db
