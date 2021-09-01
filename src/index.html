@@ -5,10 +5,255 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet href=css/style.css>
-    <title>Document</title>
+    <title>ОЛИМП</title>
 </head>
 <body>
-    <div class='test-1'>TEST</div>
-    <div class='test-2'>TEST</div>
+    <header class="header">
+        <div>Меню</div>
+        <div>
+            <img src="img/logo-white.svg" alt="logo"/>
+        </div>
+        <button>Абонемент</button>
+        <button>Заказать абонемент</button>
+        <div>
+            <ul>
+                <li>Акции</li>
+                <li>Филиалы</li>
+                <li>Абонемент</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <h1 class="visually-hidden">Спорт-клуб "Олимп"</h1>
+
+        <section class="intro">
+            <h2 class="visually-hidden">Годовой абонемент</h2>
+            <ul class="intro__slides-list">
+                <li class="intro__slide">
+                    <img src="img/intro-1.jpg" alt="" width="320" height="206">
+                </li>
+                <li class="intro__slide">
+                    <img src="img/intro-2.jpg" alt="" width="320" height="206">
+                </li>
+            </ul>
+            <p>Спорт-клуб в Перми</p>
+            <p>годовой абонемент от 2990 ₽</p>
+        </section>
+
+        <section class="advantages">
+            <h2 class="visually-hidden">Что мы можем вам предоставить:</h2>
+            <ul class="advantages__list">
+                <li class="advantages__item">
+                    <img src="img/trainer-ico.svg" alt="">
+                    <p>
+                        Тренажеры на все<br>
+                        группы мышц
+                    </p>
+                </li>
+                <li class="advantages__item">
+                    <img src="img/sauna-ico.svg" alt="">
+                    <p>
+                        Душ и сауна<br>
+                        в каждом зале
+                    </p>
+                </li>
+                <li class="advantages__item">
+                    <img src="img/group-ico.svg" alt="">
+                    <p>
+                        Более 20<br>
+                        групповых тренировок
+                    </p>
+                </li>
+                <li class="advantages__item">
+                    <img src="img/professional-ico.svg" alt="">
+                    <p>
+                        Профессиональные<br>
+                        персональные тренеры
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="promos">
+            <h2 class="promos__title">Акции</h2>
+            <div>
+                <p class="promos__timer-title">До конца акций осталось:</p>
+                <div class="promos__timer">
+                    <ul class="promos__time-indicators-list">
+                        <li class="promos__time-indicator">
+                            <span>00</span>
+                            <span>дней</span>
+                        </li>
+                        <li class="promos__time-separator">
+                            <span>|</span>
+                        </li>
+                        <li class="promos__time-indicator">
+                            <span>00</span>
+                            <span>часов</span>
+                        </li>
+                        <li class="promos__time-separator">
+                            <span>|</span>
+                        </li>
+                        <li class="promos__time-indicator">
+                            <span>00</span>
+                            <span>минут</span>
+                        </li>
+                        <li class="promos__time-separator">
+                            <span>|</span>
+                        </li>
+                        <li class="promos__time-indicator">
+                            <span>00</span>
+                            <span>секунд</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="promos__list">
+                <li class="promos__item">
+                    <div>
+                        <p>12 месяцев безлимит студент</p>
+                        <p>3299 ₽</p>
+                        <button>Очень хочу !!!</button>
+                    </div>
+                </li>
+                <li class="promos__item">
+                    <div>
+                        <p>6 месяцев безлимит +3 персональные тренировки</p>
+                        <p>2499 ₽</p>
+                        <button>Очень хочу !!!</button>
+                    </div>
+                </li>
+                <li class="promos__item">
+                    <div>
+                        <p>6 персональных тренировок</p>
+                        <p>2999 ₽</p>
+                        <button>Очень хочу !!!</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="description">
+            <h2 class="visually-hidden">О клубе</h2>
+            <ul class="description__slides-list">
+                <li class="description__slide">
+                    <img src="img/slide-1.jpg" alt="slide-1" width="144" height="262">
+                </li>
+                <li class="description__slide">
+                    <img src="img/slide-2.png" alt="slide-2" width="144" height="262">
+                </li>
+                <li class="description__slide">
+                    <img src="img/slide-3.jpg" alt="slide-3" width="144" height="262">
+                </li>
+                <li class="description__slide">
+                    <img src="img/slide-4.jpg" alt="slide-4" width="144" height="262">
+                </li>
+                <li class="description__slide">
+                    <img src="img/slide-5.jpg" alt="slide-5" width="144" height="262">
+                </li>
+            </ul>
+            <h3>Олимп</h3>
+            <p>Премиум Спорт-клуб в Перми</p>
+            <p>
+                Премиум сеть спортивных клубов в Перми.
+                Новое и современное оборудование.
+                В каждом зале есть сауна и душ.
+                Филиалы по всему городу.
+                Годовой абонемент от <span>2 990 руб.</span>
+            </p>
+            <div class="description__features">
+                <h4 class="visually-hidden">Наши преимущества</h4>
+                <ul class="description__features-list">
+                    <li class="description__feature-item">
+                        <img src="img/feature-bullet.svg" alt="">
+                        <p class="desctiption__feature-item-text">Тренажеры на все группы мышц</p>
+                    </li>
+                    <li class="description__feature-item">
+                        <img src="img/feature-bullet.svg" alt="">
+                        <p class="desctiption__feature-item-text">Более 20 направлений групповых занятий</p>
+                    </li>
+                    <li class="description__feature-item">
+                        <img src="img/feature-bullet.svg" alt="">
+                        <p class="desctiption__feature-item-text">Душ и сауна в каждом клубе</p>
+                    </li>
+                    <li class="description__feature-item">
+                        <img src="img/feature-bullet.svg" alt="">
+                        <p class="desctiption__feature-item-text">Персональные тренировки</p>
+                    </li>
+                    <li class="description__feature-item">
+                        <img src="img/feature-bullet.svg" alt="">
+                        <p class="desctiption__feature-item-text">Фитнес в каждом клубе</p>
+                    </li>
+                    <li class="description__feature-item">
+                        <img src="img/feature-bullet.svg" alt="">
+                        <p class="desctiption__feature-item-text">Дружный тренерский состав      </p>
+                    </li>
+                </ul>
+            </div>
+            <button class="description__button">
+                Записаться на пробное занятие
+            </button>
+        </section>
+
+        <section class="addresses">
+            <h2 class="addresses__title">Адреса клубов</h2>
+            <ul class="addresses__list">
+                <li class="addresses__item">
+                    <p class="adresses__item-address">Пермь, ул.Баумана, 12</p>
+                    <a href="" class="addresses__item-phone">+7(342) 000 00 01</a>
+                    <p class="adresses__item-work-time">
+                        <span>ежедневно</span> с 08:00 до 00:00
+                    </p>
+                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2115.065879435902!2d56.192917915931126!3d57.986718181209355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c753b149b7cf%3A0xcac52210c0e43729!2z0YPQuy4g0JHQsNGD0LzQsNC90LAsIDEyLCDQn9C10YDQvNGMLCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQwNjY!5e0!3m2!1sru!2sru!4v1630491503958!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+                <li class="addresses__item">
+                    <p class="adresses__item-address">Пермь, ул.Ленина, 64</p>
+                    <a href="" class="addresses__item-phone">+7(342) 000 00 02</a>
+                    <p class="adresses__item-work-time">
+                        <span>ежедневно</span> с 08:00 до 00:00
+                    </p>
+                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2113.736480113141!2d56.22822951593208!3d58.00923018121645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c725c9f02845%3A0x3b8dc651d88d381e!2z0YPQuy4g0JvQtdC90LjQvdCwLCA2NCwg0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuSwgNjE0MDQ1!5e0!3m2!1sru!2sru!4v1630491592781!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+                <li class="addresses__item">
+                    <p class="adresses__item-address">Пермь, ул.КИМ, 61</p>
+                    <a href="" class="addresses__item-phone">+7(342) 000 00 03</a>
+                    <p class="adresses__item-work-time">
+                        <span>ежедневно</span> с 08:00 до 00:00
+                    </p>
+                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2112.9145010295156!2d56.29440761593259!3d58.02314678122102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c6b0506d23fb%3A0xc6c38484a4024fdf!2z0YPQuy4g0JrQmNCcLCA2MSwg0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuSwgNjE0MTA3!5e0!3m2!1sru!2sru!4v1630491883715!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2 class="visually-hidden">Подвал сайта</h2>
+        <div class="footer__logo">
+            <img src="img/logo-white.svg" alt="logo"/>
+        </div>
+        <div class="footer__social">
+            <h3 class="footer__social-title">Мы в социальных сетях</h3>
+            <ul class="footer__social-list">
+                <li class="footer__social-item">
+                    <img src="img/twitter.svg" alt="">
+                    <p class="visually-hidden">Твиттер</p>
+                </li>
+                <li class="footer__social-item">
+                    <img src="img/instagram.svg" alt="">
+                    <p class="visually-hidden">Инстаграм</p>
+                </li>
+                <li class="footer__social-item">
+                    <img src="img/vk.svg" alt="">
+                    <p class="visually-hidden">Вконтакте</p>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="footer__about-web-site">
+            О сайте
+        </a>
+        <p class="footer__copyright">Copyright 2021 ©</p>
+    </footer>
 </body>
 </html>
