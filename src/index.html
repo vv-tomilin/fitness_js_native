@@ -9,13 +9,25 @@
 </head>
 <body>
     <header class="header">
-        <div>Меню</div>
-        <div>
-            <img src="img/logo-white.svg" alt="logo"/>
+        <div class="header__elements-wrapper">
+            <div class="header__menu">
+                <div class="header__menu-toggle header__menu-toggle--closed"></div>
+                <span class="header__menu-title">Меню</span>
+            </div>
+            <div>
+                <img class="header__logo" src="img/logo-white.svg" alt="logo"/>
+            </div>
+            <div class="header__desktop-menu">
+                <ul class="header__desktop-menu-list">
+                    <li class="header__desktop-menu-item">Акции</li>
+                    <li class="header__desktop-menu-item">Филиалы</li>
+                    <li class="header__desktop-menu-item">Абонемент</li>
+                </ul>
+            </div>
+            <button class="header__button header__button-mobile button">Абонемент</button>
+            <button class="header__button header__button-other-views button">Заказать абонемент</button>
         </div>
-        <button>Абонемент</button>
-        <button>Заказать абонемент</button>
-        <div>
+        <div class="header__menu-mobile-modal--hide">
             <ul>
                 <li>Акции</li>
                 <li>Филиалы</li>
@@ -206,7 +218,7 @@
                     <p class="adresses__item-work-time">
                         <span>ежедневно</span> с 08:00 до 00:00
                     </p>
-                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2115.065879435902!2d56.192917915931126!3d57.986718181209355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c753b149b7cf%3A0xcac52210c0e43729!2z0YPQuy4g0JHQsNGD0LzQsNC90LAsIDEyLCDQn9C10YDQvNGMLCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQwNjY!5e0!3m2!1sru!2sru!4v1630491503958!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2115.065879435902!2d56.192917915931126!3d57.986718181209355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c753b149b7cf%3A0xcac52210c0e43729!2z0YPQuy4g0JHQsNGD0LzQsNC90LAsIDEyLCDQn9C10YDQvNGMLCDQn9C10YDQvNGB0LrQuNC5INC60YDQsNC5LCA2MTQwNjY!5e0!3m2!1sru!2sru!4v1630491503958!5m2!1sru!2sru" width="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </li>
                 <li class="addresses__item">
                     <p class="adresses__item-address">Пермь, ул.Ленина, 64</p>
@@ -214,7 +226,7 @@
                     <p class="adresses__item-work-time">
                         <span>ежедневно</span> с 08:00 до 00:00
                     </p>
-                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2113.736480113141!2d56.22822951593208!3d58.00923018121645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c725c9f02845%3A0x3b8dc651d88d381e!2z0YPQuy4g0JvQtdC90LjQvdCwLCA2NCwg0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuSwgNjE0MDQ1!5e0!3m2!1sru!2sru!4v1630491592781!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2113.736480113141!2d56.22822951593208!3d58.00923018121645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c725c9f02845%3A0x3b8dc651d88d381e!2z0YPQuy4g0JvQtdC90LjQvdCwLCA2NCwg0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuSwgNjE0MDQ1!5e0!3m2!1sru!2sru!4v1630491592781!5m2!1sru!2sru" width="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </li>
                 <li class="addresses__item">
                     <p class="adresses__item-address">Пермь, ул.КИМ, 61</p>
@@ -222,7 +234,7 @@
                     <p class="adresses__item-work-time">
                         <span>ежедневно</span> с 08:00 до 00:00
                     </p>
-                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2112.9145010295156!2d56.29440761593259!3d58.02314678122102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c6b0506d23fb%3A0xc6c38484a4024fdf!2z0YPQuy4g0JrQmNCcLCA2MSwg0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuSwgNjE0MTA3!5e0!3m2!1sru!2sru!4v1630491883715!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="addresses__item-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2112.9145010295156!2d56.29440761593259!3d58.02314678122102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c6b0506d23fb%3A0xc6c38484a4024fdf!2z0YPQuy4g0JrQmNCcLCA2MSwg0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuSwgNjE0MTA3!5e0!3m2!1sru!2sru!4v1630491883715!5m2!1sru!2sru" width="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </li>
             </ul>
         </section>
