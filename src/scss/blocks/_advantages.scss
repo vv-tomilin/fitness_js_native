@@ -1,0 +1,118 @@
+@import '../global/variables';
+
+.advantages {
+
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    &__list {
+        margin-top: 40px;
+        margin-bottom: 30px;
+
+        @media (min-width: $tablet-width) {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr min-content 1fr;
+            grid-row-gap: 50px;
+        }
+
+        @media (min-width: $ipad-pro-width) {
+            position: relative;
+            top: -70px;
+
+            font-size: 14px;
+
+            z-index: 2;
+
+            width: 95%;
+            height: 220px;
+
+            margin: 0 auto;
+
+            background-color: $main-bg-white;
+
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 0px 1fr 1fr 0px 1fr;
+            align-items: center;
+            grid-gap: 10px;
+
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        }
+
+        @media (min-width: $desktop-width) {
+            font-size: 18px;
+        }
+    }
+
+    &__item {
+        margin-top: 35px;
+
+        list-style: none;
+
+        &:first-child {
+            margin-top: 0;
+
+            @media (min-width: $ipad-pro-width) {
+                margin-left: 25px;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: $ipad-pro-width) {
+                margin-right: 25px;
+            }
+        }
+
+        &-text {
+            margin-top: 10px;
+        }
+
+        &-separate {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        @media (min-width: $tablet-width) {
+            margin: 0;
+        }
+    }
+
+    &__separate-line-items {
+        width: 3px;
+        height: 126px;
+
+        background-color: $main-bg-black;
+        opacity: 0.2;
+
+        border-radius: 50px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        @media (min-width: $ipad-pro-width) {
+            display: none;
+        }
+    }
+
+    &__separate-line-bottom {
+        width: 65%;
+        height: 3px;
+
+        background-color: $main-bg-black;
+        opacity: 0.2;
+
+        border-radius: 50px;
+
+        margin: 0 auto;
+        margin-bottom: 30px;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+    }
+}
