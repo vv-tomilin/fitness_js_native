@@ -132,7 +132,15 @@
     }
 
     &__list {
-        width: 100%;
+
+        @media (min-width: $ipad-pro-width) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2.5vw;
+
+           margin: 0 auto;
+           padding: 0 2.5vw;
+        }
     }
 
     &__item {
@@ -150,6 +158,16 @@
 
         &:last-child {
             margin-bottom: 40px;
+
+            @media (min-width: $ipad-pro-width) {
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (min-width: $ipad-pro-width) {
+            width: 100%;
+
+            margin-bottom: 25px;
         }
 
         &-content {
@@ -183,6 +201,7 @@
 
         &-inner-border {
             width: 88%;
+            height: 94%;
 
             margin: 0 auto;
 
@@ -191,6 +210,10 @@
 
             @media (min-width: $tablet-width) {
                 width: 94%;
+            }
+
+            @media (min-width: $ipad-pro-width) {
+                width: 89%;
             }
         }
     }
