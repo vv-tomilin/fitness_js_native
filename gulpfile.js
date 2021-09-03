@@ -29,7 +29,7 @@ let path = {
 const { src, dest } = require("gulp"),
   gulp = require("gulp");
 const browsersync = require("browser-sync").create();
-// const fileinclude = require("gulp-file-include");
+const fileinclude = require("gulp-file-include");
 const del = require("del");
 const scss = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
@@ -39,7 +39,6 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
-// const uglify = require("gulp-uglify-es").default;
 const webpack = require("webpack-stream");
 
 
