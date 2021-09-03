@@ -26,20 +26,21 @@ let path = {
   clean: "./" + project_folder + "/"
 }
 
-let { src, dest } = require("gulp"),
+const { src, dest } = require("gulp"),
   gulp = require("gulp");
-let browsersync = require("browser-sync").create();
-let fileinclude = require("gulp-file-include");
-let del = require("del");
-let scss = require("gulp-sass");
-let autoprefixer = require("gulp-autoprefixer");
-let group_media = require("gulp-group-css-media-queries");
-let clean_css = require("gulp-clean-css");
-let rename = require("gulp-rename");
-let imagemin = require("gulp-imagemin");
-let ttf2woff = require("gulp-ttf2woff");
-let ttf2woff2 = require("gulp-ttf2woff2");
-let uglify = require("gulp-uglify-es").default;
+const browsersync = require("browser-sync").create();
+// const fileinclude = require("gulp-file-include");
+const del = require("del");
+const scss = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const group_media = require("gulp-group-css-media-queries");
+const clean_css = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const ttf2woff = require("gulp-ttf2woff");
+const ttf2woff2 = require("gulp-ttf2woff2");
+// const uglify = require("gulp-uglify-es").default;
+const webpack = require("webpack-stream");
 
 
 function browserSync(params) {
@@ -89,19 +90,35 @@ function css() {
 }
 
 function js() {
-  return src(path.src.js)         // путь к исходникам
-    .pipe(fileinclude())          // собираем подключаемые файлы скриптов в один файл
-    .pipe(dest(path.build.js))    // выгружаем в конечную папку
-    .pipe(
-      uglify()                    // минимизируем и оптимизируем файл скриптов
-    )
-    .pipe(
-      rename({                    // переименовываем минимизированный файл
-        extname: ".min.js"
-      })
-    )
-    .pipe(dest(path.build.js))    // выгружаем переименованный и минимизированный файл в конечную папку
-    .pipe(browsersync.stream())   // обновляем браузер
+	return src (path.src.js)
+					.pipe(webpack({
+						mode: 'development',
+            output: {
+                filename: 'script.js'
+            },
+            watch: false,
+            devtool: "source-map",
+            module: {
+              rules: [
+                {
+                  test: /\.m?js$/,
+                  exclude: /(node_modules|bower_components)/,
+                  use: {
+                    loader: 'babel-loader',
+                    options: {
+                      presets: [['@babel/preset-env', {
+                          debug: true,
+                          corejs: 3,
+                          useBuiltIns: "usage"
+                      }]]
+                    }
+                  }
+                }
+              ]
+            }
+					}))
+					.pipe(dest(path.build.js))
+					.pipe(browsersync.stream())
 }
 
 function images() {

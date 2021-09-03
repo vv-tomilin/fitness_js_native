@@ -1,0 +1,59 @@
+@import '../global/variables';
+
+.intro {
+
+    position: relative;
+
+    &__slide-img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__text {
+        width: 100%;
+
+        margin: 0 auto;
+
+        text-align: center;
+
+        font-size: 25px;
+        font-weight: 700;
+
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 1;
+
+        color: $main-bg-white;
+
+        @media (min-width: $tablet-width) {
+            font-size: 48px;
+        }
+
+        @media (min-width: $ipad-pro-width) {
+            left: 75px;
+
+            font-size: 72px;
+
+            text-align: left;
+        }
+
+        & span {
+            color: $additional-text-color;
+        }
+
+        &-title {
+            text-transform: uppercase;
+
+            @media (min-width: $desktop-width) {
+                font-size: 82px;
+            }
+        }
+
+        &-price {
+            @media (min-width: $desktop-width) {
+                font-size: 76px;
+            }
+        }
+    }
+}

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet href=css/style.css>
+    <link rel=stylesheet href=css/style.min.css>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>ОЛИМП</title>
 </head>
 <body>
@@ -42,16 +46,20 @@
 
         <section class="intro">
             <h2 class="visually-hidden">Годовой абонемент</h2>
-            <ul class="intro__slides-list">
-                <li class="intro__slide">
-                    <img src="img/intro-1.jpg" alt="" width="320" height="206">
-                </li>
-                <li class="intro__slide">
-                    <img src="img/intro-2.jpg" alt="" width="320" height="206">
-                </li>
-            </ul>
-            <p>Спорт-клуб в Перми</p>
-            <p>годовой абонемент от 2990 ₽</p>
+            <div class="swiper mySwiper">
+                <ul class="swiper-wrapper intro__slides-list">
+                    <li class="swiper-slide intro__slide-item">
+                        <img class="intro__slide-img" src="img/intro-1.jpg" alt="" width="320">
+                    </li>
+                    <li class="swiper-slide intro__slide">
+                        <img class="intro__slide-img" src="img/intro-2.jpg" alt="" width="320">
+                    </li>
+                </ul>
+                <div class="intro__text">
+                    <p class="intro__text-title"><span>Спорт-клуб<br></span> в Перми</p>
+                    <p class="intro__text-price">годовой абонемент<br><span>от 2990 ₽</span></p>
+                </div>
+            </div>
         </section>
 
         <section class="advantages">
@@ -267,5 +275,7 @@
         </a>
         <p class="footer__copyright">Copyright 2021 ©</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
