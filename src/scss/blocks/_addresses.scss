@@ -18,6 +18,10 @@
 
             margin-top: 45px;
         }
+
+        @media (min-width: $ipad-pro-width) {
+            font-size: 64px;
+        }
     }
 
     &__item {
@@ -33,6 +37,11 @@
             flex-wrap: nowrap;
             justify-content: space-between;
             align-items: center;
+        }
+
+        @media (min-width: $desktop-width) {
+            margin-left: 150px;
+            margin-right: 150px;
         }
 
         &:first-child {
@@ -57,6 +66,11 @@
             @media (min-width: $tablet-width) {
                 font-size: 18px;
             }
+
+            @media (min-width: $ipad-pro-width) {
+                font-size: 36px;
+                text-align: left;
+            }
         }
 
         &-phone {
@@ -76,6 +90,10 @@
 
                 margin-top: 40px;
                 margin-bottom: 38px;
+            }
+
+            @media (min-width: $ipad-pro-width) {
+                font-size: 36px;
             }
 
             &:active {
@@ -102,6 +120,10 @@
                 }
             }
 
+            @media (min-width: $ipad-pro-width) {
+                font-size: 36px;
+            }
+
             &-linebreak {
                 @media (max-width: $mobile-width-only) {
                     display: none;
@@ -116,6 +138,15 @@
             @media (min-width: $tablet-width) {
                 width: 55%;
                 height: 16vh;
+            }
+
+            @media (min-width: $ipad-pro-width) {
+                width: 45%;
+                height: 22vh;
+            }
+
+            @media (min-width: $desktop-width) {
+                height: 350px;
             }
         }
     }
@@ -133,6 +164,10 @@
 
         @media (max-width: $mobile-width-only) {
             display: none;
+        }
+
+        @media (min-width: $desktop-width) {
+            width: 90%;
         }
     }
 }
