@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-const swiper = new Swiper(".mySwiper", {
+const introSwiper = new Swiper(".intro-swiper", {
 	spaceBetween: 30,
 	centeredSlides: true,
 	effect: 'fade',
@@ -10,4 +10,4 @@ const swiper = new Swiper(".mySwiper", {
 	},
 });
 
-export default swiper;
+export default introSwiper;

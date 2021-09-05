@@ -10,6 +10,7 @@
     height: 100px;
 
     background-color: $main-bg-black;
+    box-shadow: 0px 15px 24px -12px rgba(255, 255, 255, 0.2);
 
     @media (min-width: $ipad-pro-width) {
         height: 130px;

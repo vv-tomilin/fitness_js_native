@@ -1,3 +1,5 @@
+@import '../global/variables';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -11,6 +13,14 @@ li {
 
 img {
 	max-width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+
+	@media (min-width: 2000px) {
+		width: 1440px;
+	}
 }
 
 .visually-hidden {

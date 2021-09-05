@@ -7,9 +7,9 @@
     <link rel=stylesheet href=css/style.min.css>
     <title>ОЛИМП</title>
 </head>
-<body>
+<body class="page-body">
     <header class="header">
-        <div class="header__elements-wrapper">
+        <div class="container header__elements-wrapper">
             <div class="header__menu">
                 <div class="header__menu-toggle header__menu-toggle--closed"></div>
                 <span class="header__menu-title">Меню</span>
@@ -36,7 +36,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="container">
 
         <h1 class="visually-hidden">Спорт-клуб "Олимп"</h1>
 
@@ -207,47 +207,71 @@
                     <li class="swiper-slide description__slide">
                         <img src="img/slide-5.jpg" alt="slide-5" width="144" height="262">
                     </li>
+                    <li class="swiper-slide description__slide">
+                        <img src="img/slide-6.jpg" alt="slide-5" width="144" height="262">
+                    </li>
+                    <li class="swiper-slide description__slide">
+                        <img src="img/slide-7.png" alt="slide-5" width="144" height="262">
+                    </li>
+                    <li class="swiper-slide description__slide">
+                        <img src="img/slide-8.jpg" alt="slide-5" width="144" height="262">
+                    </li>
+                    <li class="swiper-slide description__slide">
+                        <img src="img/slide-9.jpg" alt="slide-5" width="144" height="262">
+                    </li>
                 </ul>
+                <div class="description__slide-next swiper-button-next">
+                    <img src="img/description-slider-arrow.svg" alt="arrow">
+                </div>
+                <div class="description__slide-prev swiper-button-prev">
+                    <img src="img/description-slider-arrow.svg" alt="arrow">
+                </div>
             </div>
-            <h3>Олимп</h3>
-            <p>Премиум Спорт-клуб в Перми</p>
-            <p>
+            <h3 class="description__text description__text-title">Олимп</h3>
+            <p class="description__text description__text-subtitle">Премиум Спорт-клуб<br> <span>в Перми</span></p>
+            <p class="description__text-body">
                 Премиум сеть спортивных клубов в Перми.
                 Новое и современное оборудование.
                 В каждом зале есть сауна и душ.
                 Филиалы по всему городу.
-                Годовой абонемент от <span>2 990 руб.</span>
+                Годовой абонемент от<br><span>2 990 руб.</span>
             </p>
             <div class="description__features">
                 <h4 class="visually-hidden">Наши преимущества</h4>
                 <ul class="description__features-list">
-                    <li class="description__feature-item">
-                        <img src="img/feature-bullet.svg" alt="">
-                        <p class="desctiption__feature-item-text">Тренажеры на все группы мышц</p>
+                    <li class="description__feature-double-block">
+                        <div class="description__feature-item">
+                            <img src="img/feature-bullet.svg" alt="">
+                            <p class="description__feature-item-text">Тренажеры на все группы мышц</p>
+                        </div>
+                        <div class="description__feature-item">
+                            <img src="img/feature-bullet.svg" alt="">
+                            <p class="description__feature-item-text">Более 20 направлений групповых занятий</p>
+                        </div>
                     </li>
-                    <li class="description__feature-item">
-                        <img src="img/feature-bullet.svg" alt="">
-                        <p class="desctiption__feature-item-text">Более 20 направлений групповых занятий</p>
+                    <li class="description__feature-double-block">
+                        <div class="description__feature-item">
+                            <img src="img/feature-bullet.svg" alt="">
+                            <p class="description__feature-item-text">Душ и сауна в каждом клубе</p>
+                        </div>  
+                        <div class="description__feature-item">
+                            <img src="img/feature-bullet.svg" alt="">
+                            <p class="description__feature-item-text">Персональные тренировки</p>
+                        </div>
                     </li>
-                    <li class="description__feature-item">
-                        <img src="img/feature-bullet.svg" alt="">
-                        <p class="desctiption__feature-item-text">Душ и сауна в каждом клубе</p>
-                    </li>
-                    <li class="description__feature-item">
-                        <img src="img/feature-bullet.svg" alt="">
-                        <p class="desctiption__feature-item-text">Персональные тренировки</p>
-                    </li>
-                    <li class="description__feature-item">
-                        <img src="img/feature-bullet.svg" alt="">
-                        <p class="desctiption__feature-item-text">Фитнес в каждом клубе</p>
-                    </li>
-                    <li class="description__feature-item">
-                        <img src="img/feature-bullet.svg" alt="">
-                        <p class="desctiption__feature-item-text">Дружный тренерский состав      </p>
+                    <li class="description__feature-double-block">
+                        <div class="description__feature-item">
+                            <img src="img/feature-bullet.svg" alt="">
+                            <p class="description__feature-item-text">Фитнес в каждом клубе</p>
+                        </div>
+                        <div class="description__feature-item">
+                            <img src="img/feature-bullet.svg" alt="">
+                            <p class="description__feature-item-text">Дружный тренерский состав      </p>
+                        </div>
                     </li>
                 </ul>
             </div>
-            <button class="description__button">
+            <button class="description__button button">
                 Записаться на пробное занятие
             </button>
         </section>
@@ -284,31 +308,33 @@
     </main>
 
     <footer class="footer">
-        <h2 class="visually-hidden">Подвал сайта</h2>
-        <div class="footer__logo">
-            <img src="img/logo-white.svg" alt="logo"/>
+        <div class="contaiter">
+            <h2 class="visually-hidden">Подвал сайта</h2>
+            <div class="footer__logo">
+                <img src="img/logo-white.svg" alt="logo"/>
+            </div>
+            <div class="footer__social">
+                <h3 class="footer__social-title">Мы в социальных сетях</h3>
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <img src="img/twitter.svg" alt="">
+                        <p class="visually-hidden">Твиттер</p>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="img/instagram.svg" alt="">
+                        <p class="visually-hidden">Инстаграм</p>
+                    </li>
+                    <li class="footer__social-item">
+                        <img src="img/vk.svg" alt="">
+                        <p class="visually-hidden">Вконтакте</p>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="footer__about-web-site">
+                О сайте
+            </a>
+            <p class="footer__copyright">Copyright 2021 ©</p>
         </div>
-        <div class="footer__social">
-            <h3 class="footer__social-title">Мы в социальных сетях</h3>
-            <ul class="footer__social-list">
-                <li class="footer__social-item">
-                    <img src="img/twitter.svg" alt="">
-                    <p class="visually-hidden">Твиттер</p>
-                </li>
-                <li class="footer__social-item">
-                    <img src="img/instagram.svg" alt="">
-                    <p class="visually-hidden">Инстаграм</p>
-                </li>
-                <li class="footer__social-item">
-                    <img src="img/vk.svg" alt="">
-                    <p class="visually-hidden">Вконтакте</p>
-                </li>
-            </ul>
-        </div>
-        <a href="#" class="footer__about-web-site">
-            О сайте
-        </a>
-        <p class="footer__copyright">Copyright 2021 ©</p>
     </footer>
 
     <script src="js/script.js"></script>
