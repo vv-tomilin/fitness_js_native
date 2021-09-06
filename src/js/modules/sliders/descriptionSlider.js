@@ -84,55 +84,39 @@ const descriptionSwiper = new Swiper(".description-swiper", {
       spaceBetween: 15
     },
 		1020: {
-      slidesPerView: 3,
+      slidesPerView: 4.3,
       spaceBetween: 15
     },
 		1050: {
-      slidesPerView: 3.1,
+      slidesPerView: 4.5,
       spaceBetween: 15
     },
 		1100: {
-      slidesPerView: 3.25,
+      slidesPerView: 4.7,
       spaceBetween: 20
     },
 		1150: {
-      slidesPerView: 3.35,
-      spaceBetween: 20
-    },
-		1200: {
-      slidesPerView: 3.7,
-      spaceBetween: 20
-    },
-		1300: {
-      slidesPerView: 3.9,
-      spaceBetween: 20
-    },
-		1400: {
-      slidesPerView: 4.2,
-      spaceBetween: 20
-    },
-		1500: {
-      slidesPerView: 4.6,
-      spaceBetween: 20
-    },
-		1600: {
       slidesPerView: 4.9,
       spaceBetween: 20
     },
-		1700: {
+		1200: {
       slidesPerView: 5.2,
       spaceBetween: 20
     },
-		1800: {
+		1300: {
       slidesPerView: 5.5,
       spaceBetween: 20
     },
-		1900: {
-      slidesPerView: 5.8,
+		1400: {
+      slidesPerView: 5.9,
       spaceBetween: 20
     },
-		2000: {
-      slidesPerView: 4,
+		1500: {
+      slidesPerView: 6.2,
+      spaceBetween: 20
+    },
+		1600: {
+      slidesPerView: 6.5,
       spaceBetween: 20
     },
   },

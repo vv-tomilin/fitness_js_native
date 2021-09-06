@@ -20,7 +20,7 @@
         }
 
         @media (min-width: $ipad-pro-width) {
-            font-size: 64px;
+            font-size: 48px;
         }
     }
 
@@ -40,8 +40,8 @@
         }
 
         @media (min-width: $desktop-width) {
-            margin-left: 150px;
-            margin-right: 150px;
+            margin-left: 250px;
+            margin-right: 250px;
         }
 
         &:first-child {
@@ -53,10 +53,13 @@
         }
 
         &-text-wrapper {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-items: baseline;
+
+            @media (min-width: $tablet-width) {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: baseline;
+            }
         }
 
         &-address {
@@ -68,7 +71,7 @@
             }
 
             @media (min-width: $ipad-pro-width) {
-                font-size: 36px;
+                font-size: 26px;
                 text-align: left;
             }
         }
@@ -93,7 +96,7 @@
             }
 
             @media (min-width: $ipad-pro-width) {
-                font-size: 36px;
+                font-size: 28px;
             }
 
             &:active {
@@ -105,23 +108,26 @@
             font-size: 14px;
             font-weight: 400;
 
-            text-align: left;
+            
 
             margin-bottom: 8px;
 
             @media (min-width: $tablet-width) {
                 font-size: 18px;
-
+                text-align: left;
                 margin: 0;
 
                 & span {
-                    display: block;
-                    text-align: center;
+
+                    @media (min-width: $tablet-width) {
+                        display: block;
+                        text-align: center;
+                    }
                 }
             }
 
             @media (min-width: $ipad-pro-width) {
-                font-size: 36px;
+                font-size: 26px;
             }
 
             &-linebreak {
@@ -146,7 +152,7 @@
             }
 
             @media (min-width: $desktop-width) {
-                height: 350px;
+                height: 250px;
             }
         }
     }
@@ -167,7 +173,7 @@
         }
 
         @media (min-width: $desktop-width) {
-            width: 90%;
+            width: 70%;
         }
     }
 }

@@ -38,11 +38,6 @@
                 width: 210px;
                 height: 373px;
             }
-
-            @media (min-width: $ipad-pro-width) {
-                width: 313px;
-                height: 557px;
-            }
         }
 
         &-next {
@@ -83,10 +78,6 @@
             @media (min-width: $tablet-width) {
                 font-size: 64px;
             }
-
-            @media (min-width: $ipad-pro-width) {
-                font-size: 72px;
-            }
         }
 
         &-subtitle {
@@ -103,10 +94,6 @@
             @media (min-width: $tablet-width) {
                 width: 100%;
                 font-size: 36px;
-            }
-
-            @media (min-width: $ipad-pro-width) {
-                font-size: 40px;
             }
         }
 
@@ -129,8 +116,9 @@
             }
 
             @media (min-width: $ipad-pro-width) {
-                font-size: 36px;
-                line-height: 45px;
+                width: 60%;
+
+                line-height: 40px;
             }
         }
     }
