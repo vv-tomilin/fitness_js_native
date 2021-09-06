@@ -1,0 +1,66 @@
+@import '../global/variables';
+
+.footer {
+    background-color: $main-bg-black;
+    color: $main-bg-white;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &__logo {
+        
+        & img {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            width: 200px;
+        }
+    }
+
+    &__social {
+
+        &-title {
+            font-weight: 100;
+            margin-bottom: 20px;
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: max-content max-content max-content;
+            justify-content: center;
+            grid-gap: 35px;
+
+            margin-bottom: 35px;
+        }
+
+        &-item {
+
+            &:active {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &__about-web-site {
+        display: block;
+        text-decoration: none;
+
+        font-weight: 700;
+        color: $main-bg-white;
+
+        margin-bottom: 40px;
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+
+    &__copyright {
+        text-transform: none;
+
+        font-weight: 100;
+
+        padding-bottom: 40px;
+    }
+}
