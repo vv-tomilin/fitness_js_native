@@ -1,12 +1,17 @@
 @import '../global/variables';
 
 .footer {
+    width: 100%;
     background-color: $main-bg-black;
     color: $main-bg-white;
 
     font-size: 14px;
     text-transform: uppercase;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 40px;
+    }
 
     &__logo {
         
@@ -27,11 +32,21 @@
             @media (max-width: $mobile-width-only) {
                 display: none;
             }
+
+            @media (min-width: $ipad-pro-width) {
+                display: none;
+            }
         }
 
         &--other-views {
             @media (min-width: $tablet-width) {
                 display: none;
+            }
+
+            @media (min-width: $ipad-pro-width) {
+                display: block;
+
+                margin-left: 70px;
             }
         }
     }
@@ -63,10 +78,15 @@
             margin-left: 70px;
         }
 
-        @media (min-width: $tablet-width) {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        @media (min-width: $ipad-pro-width) {
+
+            width: max-content;
+
+            flex-direction: column;
+
+            margin: 0;
+
+            margin-right: 87px;
         }
 
         &-title {
@@ -75,6 +95,10 @@
 
             @media (min-width: $tablet-width) {
                 margin: 0;
+            }
+
+            @media (min-width: $ipad-pro-width) {
+                margin-bottom: 20px;
             }
         }
 
@@ -100,11 +124,15 @@
     }
 
     &__about-web-site {
+        width: max-content;
+
         display: block;
         text-decoration: none;
 
         font-weight: 700;
         color: $main-bg-white;
+
+        margin: auto;
 
         margin-bottom: 40px;
 
@@ -112,8 +140,29 @@
             opacity: 0.3;
         }
 
+        &--desktop {
+            display: block;
+
+            padding-right: 70px;
+
+            @media (max-width: 1023px) {
+                display: none;
+            }
+        }
+
+        &--other-views {
+
+            @media (min-width: $ipad-pro-width) {
+                display: none;
+            }
+        }
+
         @media (min-width: $tablet-width) {
             margin-bottom: 15px;
+        }
+
+        @media (min-width: $ipad-pro-width) {
+            margin: 0;
         }
     }
 
@@ -123,5 +172,9 @@
         font-weight: 100;
 
         padding-bottom: 40px;
+
+        @media (min-width: $ipad-pro-width) {
+            margin-top: 25px;
+        }
     }
 }
