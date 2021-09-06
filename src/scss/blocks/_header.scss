@@ -215,6 +215,10 @@
     }
 
     &__menu-mobile-modal {
+        width: 100%;
+        height: max-content;
+        background: red;
+
         &--hide {
             display: none;
         }
