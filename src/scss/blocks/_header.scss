@@ -215,11 +215,52 @@
     }
 
     &__menu-mobile-modal {
+        
+        position: fixed;
+        top: 100px;
+        z-index: 3;
+
         width: 100%;
-        height: max-content;
-        background: red;
+        background: $main-bg-black;
+
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        color: $main-bg-white;
+
+        @media (min-width: $tablet-width) {
+            width: 40%;
+        }
+
+        &-list {
+            overflow-y: scroll;
+
+            height: 100vh;
+
+            padding: 25px 0;
+        }
+
+        &-item {
+
+            text-shadow: 1px 0px 17px rgba(255, 255, 255, 1);
+
+            padding: 20px 0;
+
+            &:active {
+                text-shadow: none;
+                opacity: 0.3;
+            }
+
+            &-empty {
+                height: 150px;
+            }
+        }
 
         &--hide {
+            display: none;
+        }
+
+        @media (min-width: 1025px) {
             display: none;
         }
     }
