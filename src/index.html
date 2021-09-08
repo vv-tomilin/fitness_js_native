@@ -19,9 +19,9 @@
             </div>
             <div class="header__desktop-menu">
                 <ul class="header__desktop-menu-list">
-                    <li class="header__desktop-menu-item">Акции</li>
-                    <li class="header__desktop-menu-item">Филиалы</li>
-                    <li class="header__desktop-menu-item">Абонемент</li>
+                    <li data-modal="promos" class="header__desktop-menu-item">Акции</li>
+                    <li data-modal="addresses" class="header__desktop-menu-item">Филиалы</li>
+                    <li data-modal="about-club" class="header__desktop-menu-item">О клубе</li>
                 </ul>
             </div>
             <button class="header__button header__button-mobile button">Абонемент</button>
@@ -31,14 +31,14 @@
 
     <div class="header__menu-mobile-modal header__menu-mobile-modal--hide">
         <ul class="header__menu-mobile-modal-list">
-            <li class="header__menu-mobile-modal-item">
-                <a>Акции</a>
+            <li data-modal="promos" class="header__menu-mobile-modal-item">
+                Акции
             </li>
-            <li class="header__menu-mobile-modal-item">
-                <a>Филиалы</a>
+            <li data-modal="addresses" class="header__menu-mobile-modal-item">
+                Филиалы
             </li>
-            <li class="header__menu-mobile-modal-item">
-                <a>Абонемент</a>
+            <li data-modal="about-club" class="header__menu-mobile-modal-item">
+                О клубе
             </li>
             
             <li class="header__menu-mobile-modal-item-empty"></li>
@@ -109,7 +109,7 @@
         </section>
 
         <section class="promos">
-            <h2 class="promos__title">Акции</h2>
+            <h2 class="promos__title" id="promos">Акции</h2>
             <div class="promos__timer-wrapper">
                 <div class="promos__timer">
                     <p class="promos__timer-title">До конца акций осталось:</p>
@@ -199,7 +199,7 @@
 
         <section class="description">
             <h2 class="visually-hidden">О клубе</h2>
-            <div class="swiper description-swiper description__slider">
+            <div id="about-club" class="swiper description-swiper description__slider">
                 <ul class="swiper-wrapper description__slides-list">
                     <li class="swiper-slide description__slide">
                         <img src="img/slide-1.jpg" alt="slide-1" width="144" height="262">
@@ -280,7 +280,7 @@
         </section>
 
         <section class="addresses">
-            <h2 class="addresses__title">Адреса клубов</h2>
+            <h2 class="addresses__title" id="addresses">Адреса клубов</h2>
             <ul class="addresses__list">
                 <li class="addresses__item">
                     <div class="addresses__item-text-wrapper">
