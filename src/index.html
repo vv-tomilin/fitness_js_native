@@ -368,6 +368,37 @@
         <p class="footer__copyright">Copyright 2021 ©</p>
     </footer>
 
+    <div class="popup">
+        <div class="popup__dialog">
+            <div class="popup__content">
+                <button type="button" class="popup__close"><strong>&times;</strong></button>
+                <div class="popup__form">
+                    <form class="form" action="#">
+                        <h2 class="form__title">Заказ абонемента</h2>
+                        <input class="form__input" name="user_name" required type="text" placeholder="Введите ваше имя">
+                        <input class="form__input" name="user_phone" required type="text" placeholder="Введите телефон">
+                        <select class="form__input form__select" name="abonement-type">
+                            <option selected hidden>Выберите абонемент</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select class="form__input form__select" name="abonement-type">
+                            <option selected hidden>Выберите филиал</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button class="form__button button" name="submit" type="submit">Отправить заявку</button>
+                        <p class="form__notice">Нажимая "Отправить заявку", я даю согласие на обработку персональных данных</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

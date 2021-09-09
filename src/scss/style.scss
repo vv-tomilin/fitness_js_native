@@ -3,13 +3,15 @@
 @import './global/_variables';
 @import './global/_fonts';
 
-@import './elements/button';
-@import './elements/swiper';
+@import './elements/_button';
+@import './elements/_swiper';
 
 @import './blocks/_header';
-@import './blocks/intro';
-@import './blocks/advantages';
-@import './blocks/promos';
-@import './blocks/description';
+@import './blocks/_intro';
+@import './blocks/_advantages';
+@import './blocks/_promos';
+@import './blocks/_description';
 @import './blocks/_addresses';
 @import './blocks/_footer';
+
+@import './modals/_popup';

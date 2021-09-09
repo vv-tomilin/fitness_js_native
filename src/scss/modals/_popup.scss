@@ -1,0 +1,149 @@
+@import '../global/_variables';
+
+.popup {
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 10;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    @media (min-width: $tablet-width) {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    &__content {
+        height: min-content;
+        z-index: 1;
+
+        @media (max-width: $mobile-width-only) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: $mobile-width-only) and (orientation:landscape) {
+            position: absolute;
+            top: calc(50% + 100px);
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+    }
+
+
+    &__dialog {
+        width: 40%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+        background: $main-bg-white;
+
+        @media (max-width: $mobile-width-only) {
+            width: 100vw;
+            height: 100vh;
+
+            overflow-y: scroll;
+        }
+
+        @media (min-width: $tablet-width) {
+            width: 60%;
+        }
+
+        @media (min-width: $tablet-width) and (max-width: $ipad-pro-width) and (orientation:landscape) {
+            top: calc(50% + 100px);
+        }
+
+        @media (min-width: $ipad-pro-width) {
+            width: 50%;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: -2.2rem;
+        right: -3rem;
+        font-size: 3rem;
+        color: $main-bg-white;
+        border: none;
+        background: transparent;
+
+        z-index: 10;
+
+        @media (max-width: $mobile-width-only) {
+            position: fixed;
+            right: 2rem;
+            top: 0;
+            color: $main-bg-black;
+        }
+    }
+
+    &__form {
+        text-align: center;
+
+        padding: 45px;
+
+        & .form {
+
+            &__title {
+                margin-bottom: 20px;
+
+                font-size: 30px;
+                text-transform: uppercase;
+            }
+
+            &__input {
+                display: block;
+
+                width: 100%;
+
+                font-size: 26px;
+                text-transform: uppercase;
+                font-weight: 100;
+                text-align: center;
+
+                border: 2px solid black;
+                border-radius: 6px;
+
+                margin: 20px auto;
+
+                &::placeholder {
+                    text-align: center;
+                    padding: 5px;
+                }
+            }
+
+            &__select {
+                text-align: center;
+                text-align-last: center;
+            }
+
+            &__button {
+                margin-bottom: 25px;
+
+                width: 200px;
+                height: 50px;
+            }
+
+            &__notice {
+                width: 90%;
+
+                margin: 0 auto;
+            }
+        }
+    }
+}
