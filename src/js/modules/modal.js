@@ -1,4 +1,4 @@
-const modals = () => {
+const modal = () => {
 	
 	const modal = document.querySelector('.popup');
 	const triggers = document.querySelectorAll('[data-modal-open]');
@@ -19,4 +19,4 @@ const modals = () => {
 	});
 };
 
-export default modals;
+export default modal;
