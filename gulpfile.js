@@ -1,4 +1,5 @@
-let project_folder = require("path").basename(__dirname);
+//let project_folder = require("path").basename(__dirname);
+let project_folder = 'C:/MAMP/htdocs/fitness_js'
 let source_folder = "src";
 
 let path = {
@@ -7,7 +8,8 @@ let path = {
     css: project_folder + "/css/",
     js: project_folder + "/js/",
     img: project_folder + "/img/",
-    fonts: project_folder + "/fonts/"
+    fonts: project_folder + "/fonts/",
+		db: project_folder + "/db/"
   },
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -15,7 +17,8 @@ let path = {
     allscss: source_folder + "/scss/**/.scss",
     js: source_folder + "/js/main.js",
     img: source_folder + "/img/**/*.+(jpg|png|svg|gif|ico|webp)",
-    fonts: source_folder + "/fonts/*.ttf"
+    fonts: source_folder + "/fonts/*.ttf",
+		db: source_folder + "/db/**"
   },
   watch: {
     html: source_folder + "/**/*.html",
@@ -143,6 +146,11 @@ function fonts() {
     .pipe(dest(path.build.fonts))
 }
 
+function db() {
+	return src(path.src.db)
+		.pipe(dest(path.build.db))
+}
+
 function watchFiles(params) {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
@@ -154,11 +162,12 @@ function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(css, js, html, images, fonts));
+let build = gulp.series(clean, gulp.parallel(css, js, html, images, fonts, db));
 
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;
+exports.db = db;
 exports.images = images;
 exports.js = js;
 exports.css = css;

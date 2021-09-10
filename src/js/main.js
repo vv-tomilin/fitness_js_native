@@ -3,6 +3,7 @@ import descriptionSwiper from './modules/sliders/descriptionSlider';
 import headerMenuToggle from './modules/headerMenuToggle';
 import modal from './modules/modal';
 import timer from './modules/timer';
+import form from './modules/form';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const deadline = '2021-11-31';
@@ -12,5 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	headerMenuToggle();
 	modal();
-	timer('.promos__timer', deadline)
+	timer('.promos__timer', deadline);
+	form();
 });
