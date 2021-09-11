@@ -1,5 +1,5 @@
-//let project_folder = require("path").basename(__dirname);
-let project_folder = 'C:/MAMP/htdocs/fitness_js'
+let project_folder = require("path").basename(__dirname);
+//let project_folder = 'C:/MAMP/htdocs/fitness_js'
 let source_folder = "src";
 
 let path = {

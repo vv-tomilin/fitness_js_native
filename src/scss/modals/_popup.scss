@@ -130,6 +130,22 @@
             &__select {
                 text-align: center;
                 text-align-last: center;
+
+                @media (max-width: $mobile-width-only) {
+                    overflow-x: scroll;
+                    overflow-y: scroll;
+                }
+
+                & option {
+                    text-transform: none;
+
+                    @media (max-width: $mobile-width-only) {
+                        font-size: 10px;
+
+                        overflow-x: scroll;
+                        overflow-y: scroll;
+                    }
+                }
             }
 
             &__button {

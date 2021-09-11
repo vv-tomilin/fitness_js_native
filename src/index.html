@@ -172,7 +172,7 @@
                         <div class="promos__item-content">
                             <p class="promos__item-content-title">12 месяцев <br> безлимит студент</p>
                             <p class="promos__item-content-price">3299 ₽</p>
-                            <button data-modal-open class="promos__item-content-button button">Очень хочу !!!</button>
+                            <button data-modal-open="1" class="promos__item-content-button button">Очень хочу !!!</button>
                         </div>
                     </div>
                 </li>
@@ -181,7 +181,7 @@
                         <div class="promos__item-content">
                             <p class="promos__item-content-title">6 месяцев безлимит <br>+3 персональные тренировки</p>
                             <p class="promos__item-content-price">2499 ₽</p>
-                            <button data-modal-open class="promos__item-content-button button">Очень хочу !!!</button>
+                            <button data-modal-open="2" class="promos__item-content-button button">Очень хочу !!!</button>
                         </div>
                     </div>
                 </li>
@@ -190,7 +190,7 @@
                         <div class="promos__item-content">
                             <p class="promos__item-content-title">6 персональных <br> тренировок </p>
                             <p class="promos__item-content-price">2999 ₽</p>
-                            <button data-modal-open class="promos__item-content-button button">Очень хочу !!!</button>
+                            <button data-modal-open="3" class="promos__item-content-button button">Очень хочу !!!</button>
                         </div>
                     </div>
                 </li>
@@ -274,7 +274,7 @@
                     </li>
                 </ul>
             </div>
-            <button data-modal-open class="description__button button">
+            <button data-modal-open="trial" class="description__button button">
                 Записаться на пробное занятие
             </button>
         </section>
@@ -377,19 +377,21 @@
                         <h2 class="form__title">Заказ абонемента</h2>
                         <input class="form__input" name="user_name" required type="text" placeholder="Введите ваше имя">
                         <input class="form__input" name="user_phone" required type="text" placeholder="Введите телефон">
-                        <select class="form__input form__select" name="abonement-type">
-                            <option selected hidden>Выберите абонемент</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                        <select id="abonement-select" class="form__input form__select" name="abonement-type">
+                            <option selected hidden value="0">Выберите абонемент</option>
+                            <option value="1">12 месяцев безлимит студент 3299 ₽</option>
+                            <option value="2">6 месяцев безлимит +3 персональные тренировки 2499 ₽</option>
+                            <option value="3">6 персональных тренировок 2999 ₽</option>
+                            <option value="4">12 месяцев безлимит 4499 ₽</option>
+                            <option value="5">4 месяца безлимит 2099 ₽</option>
+                            <option value="6">Пробное занятие</option>
+                            <option value="7">Другое</option>
                         </select>
-                        <select class="form__input form__select" name="abonement-type">
-                            <option selected hidden>Выберите филиал</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                        <select id="addresses-select" class="form__input form__select" name="addresses">
+                            <option selected hidden value="0">Выберите филиал</option>
+                            <option value="1">Пермь, ул.Баумана, 12</option>
+                            <option value="2">Пермь, ул.Ленина, 64</option>
+                            <option value="3">Пермь, ул.КИМ, 61</option>
                         </select>
                         <button class="form__button button" name="submit" type="submit">Отправить заявку</button>
                         <p class="form__notice">Нажимая "Отправить заявку", я даю согласие на обработку персональных данных</p>

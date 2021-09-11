@@ -4,9 +4,9 @@ const form = () => {
 	const inputs = document.querySelectorAll('input');
 
 	const message = {
-		loading: 'Запкгзка...',
+		loading: 'Загрузка...',
 		success: 'Спасибо! Скоро мы с вами свяжемся.',
-		failure: 'Что то пошло не так'
+		failure: 'Что то пошло не так...'
 	};
 
 	const postData = async (url, data) => {
