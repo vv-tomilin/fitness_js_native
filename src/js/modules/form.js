@@ -2,6 +2,9 @@ const form = () => {
 	
 	const abonementForm = document.querySelector('.popup .form');
 	const inputs = document.querySelectorAll('input');
+	const selects = document.querySelectorAll('select');
+
+	const modal = document.querySelector('.popup');
 
 	const message = {
 		loading: 'Загрузка...',
@@ -20,10 +23,20 @@ const form = () => {
 		return await result.text();
 	};
 
-	const clearInputs = () => {
+	const clearFormFields = () => {
 		inputs.forEach((item) => {
 			item.value = '';
 		});
+
+		selects.forEach((item) => {
+			item.value = '0';
+		});
+	};
+
+	const formClose = (selector) => {
+		selector.classList.add('popup--hide');
+		document.body.style.overflow = '';
+		document.body.style.marginRight = '0px';
 	};
 
 	abonementForm.addEventListener('submit', (e) => {
@@ -45,9 +58,10 @@ const form = () => {
 							statusMessage.textContent = message.failure;
 						})
 						.finally(() => {
-							clearInputs();
+							clearFormFields();
 							setTimeout(() => {
 								statusMessage.remove();
+								formClose(modal);
 							}, 3000);
 						});
 	});
