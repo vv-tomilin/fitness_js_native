@@ -6,14 +6,14 @@ const form = () => {
 
 	const modal = document.querySelector('.popup');
 
-	const message = {
-		loading: 'Загрузка...',
-		success: 'Спасибо! Скоро мы с вами свяжемся.',
-		failure: 'Что то пошло не так...'
-	};
+	const formStatus = document.querySelector('.form-status');
+	const formStatusLoading = formStatus.querySelector('.form-status__loading');
+	const formStatusSuccess = formStatus.querySelector('.form-status__success');
+	const formStatusFailure = formStatus.querySelector('.form-status__failure');
 
 	const postData = async (url, data) => {
-		document.querySelector('.status').textContent = message.loading;
+
+		showStatus(formStatus, formStatusLoading, [formStatusSuccess, formStatusFailure]);
 
 		let result = await fetch(url, {
 			method: 'POST',
@@ -23,7 +23,37 @@ const form = () => {
 		return await result.text();
 	};
 
-	const clearFormFields = () => {
+	abonementForm.addEventListener('submit', (e) => {
+
+		e.preventDefault();
+
+		const formData = new FormData(abonementForm);
+
+		postData('db/server.php', formData)
+						.then((res) => {
+							console.log(res);
+							showStatus(formStatus, formStatusSuccess, [formStatusLoading, formStatusFailure]);
+						})
+						.catch(() => {
+							showStatus(formStatus, formStatusFailure, [formStatusLoading, formStatusSuccess]);
+						})
+						.finally(() => {
+							clearFormFields();
+							setTimeout(() => {
+								formClose(modal);
+							}, 3000);
+						});
+	});
+
+	function formClose(selector) {
+		selector.classList.add('popup--hide');
+		document.body.style.overflow = '';
+		document.body.style.marginRight = '0px';
+
+		formStatus.classList.add('popup--hide');
+	};
+
+	function clearFormFields() {
 		inputs.forEach((item) => {
 			item.value = '';
 		});
@@ -33,38 +63,21 @@ const form = () => {
 		});
 	};
 
-	const formClose = (selector) => {
-		selector.classList.add('popup--hide');
-		document.body.style.overflow = '';
-		document.body.style.marginRight = '0px';
-	};
+	function showStatus(statusBlockSelector, showStatusSelector, hideStatusSelectors=[]) {
+		if (statusBlockSelector.classList.contains('popup--hide')) {
+			statusBlockSelector.classList.remove('popup--hide');
+		}
 
-	abonementForm.addEventListener('submit', (e) => {
+		if (showStatusSelector.classList.contains('popup--hide')) {
+			showStatusSelector.classList.remove('popup--hide');
 
-		e.preventDefault();
-
-		let statusMessage = document.createElement('div');
-		statusMessage.classList.add('status');
-		abonementForm.appendChild(statusMessage);
-
-		const formData = new FormData(abonementForm);
-
-		postData('db/server.php', formData)
-						.then((res) => {
-							console.log(res);
-							statusMessage.textContent = message.success;
-						})
-						.catch(() => {
-							statusMessage.textContent = message.failure;
-						})
-						.finally(() => {
-							clearFormFields();
-							setTimeout(() => {
-								statusMessage.remove();
-								formClose(modal);
-							}, 3000);
-						});
-	});
+			hideStatusSelectors.forEach((hideSelector) => {
+				if (!hideSelector.classList.contains('popup--hide')) {
+					hideSelector.classList.add('popup--hide');
+				}
+			});
+		}
+	}
 };
 
 export default form;

@@ -1,0 +1,48 @@
+@import '../global/variables';
+
+.form-status {
+    width: 30%;
+    height: 30vh;
+
+    background: #f1f4ea;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px 14px rgba(34, 60, 80, 0.2);
+
+    z-index: 20;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: $mobile-width-only) {
+        width: 75%;
+    }
+
+    @media (max-width: $mobile-width-only) and (orientation:landscape) {
+        height: 70vh;
+    }
+
+    &__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+
+        & img {
+            // position: relative;
+            // left: 50%;
+            // transform: translate(-50%, 0);
+
+            width: 40px;
+            height: 40px;
+
+            margin: 0 auto;
+        }
+    }
+}
