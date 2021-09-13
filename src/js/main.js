@@ -4,6 +4,7 @@ import headerMenuToggle from './modules/headerMenuToggle';
 import modal from './modules/modal';
 import timer from './modules/timer';
 import form from './modules/form';
+import mask from './modules/mask';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const deadline = '2021-11-31';
@@ -15,4 +16,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	modal();
 	timer('.promos__timer', deadline);
 	form();
+	mask('[name="user_phone"]');
 });
