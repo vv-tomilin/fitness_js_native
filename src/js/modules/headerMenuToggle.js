@@ -70,7 +70,7 @@ const headerMenuToggle = () => {
 			behavior: 'smooth'
 		};
 
-		targetElement.scrollIntoView(scrollOptions);
+			targetElement.scrollIntoView(scrollOptions);
 	}
 }
 
