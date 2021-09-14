@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=css/style.min.css>
+    <title>ОЛИМП</title>
+</head>
+<body class="page-body">
+    <header class="header">
+        <div class="container header__elements-wrapper">
+            <div class="header__menu">
+                <div class="header__menu-toggle header__menu-toggle--closed"></div>
+                <span class="header__menu-title">Меню</span>
+            </div>
+            <div>
+                <a href="index.html">
+                    <img class="header__logo" src="img/logo-white.svg" alt="logo"/>
+                </a>
+            </div>
+            <div class="header__desktop-menu">
+                <ul class="header__desktop-menu-list">
+                    <li data-modal="promos" class="header__desktop-menu-item">Акции</li>
+                    <li data-modal="addresses" class="header__desktop-menu-item">Филиалы</li>
+                    <li data-modal="about-club" class="header__desktop-menu-item">О клубе</li>
+                </ul>
+            </div>
+            <button data-modal-open class="header__button header__button-mobile button">Абонемент</button>
+            <button data-modal-open class="header__button header__button-other-views button">Заказать абонемент</button>
+        </div>
+    </header>
+
+    <div class="header__menu-mobile-modal header__menu-mobile-modal--hide">
+        <ul class="header__menu-mobile-modal-list">
+            <li data-modal="promos" class="header__menu-mobile-modal-item">
+                Акции
+            </li>
+            <li data-modal="addresses" class="header__menu-mobile-modal-item">
+                Филиалы
+            </li>
+            <li data-modal="about-club" class="header__menu-mobile-modal-item">
+                О клубе
+            </li>
+            
+            <li class="header__menu-mobile-modal-item-empty"></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <section class="about-site">
+            <h1 class="about-site__title">О сайте</h1>
+            <p class="about-site__text">
+                Привет! Меня зовут Василий и этот сайт является моим учебным проектом.
+            </p>
+            <p class="about-site__text">
+                Дизайн разрабатывался мной.<br/>
+                Идею дизайна взял с сайта спорт-клуба 
+                <a class="about-site__link" href="https://perm.skala-sportclub.ru">"Скала"</a><br/>
+            </p>
+            <h2 class="about-site__subtitle">Stack. Что реализовано:</h2>
+            <ul class="about-site__stack-list">
+                <li class="about-site__stack-list-item">&#128073; HTML, стили написаны на препроцессоре SCSS(Saas), логика - JavaScript;</li>
+                <li class="about-site__stack-list-item">
+                    &#128073; Стили написаны для мобильной, планшетной и десктопной версии сайта, 
+                    а также для частных и переходных разрешений мониторов;
+                </li>
+                <li class="about-site__stack-list-item">
+                    &#128073; В блоке интро и в блоке "О клубе" (см. верстку) реализованны слайдеры;<br/>
+                    с помощью плагина "Swiper"
+                </li>
+                <li class="about-site__stack-list-item">
+                    &#128073; Реализованно модальное окно заказа абонемента. Реализовано автоматическое 
+                    заполнение поля с абонементом в модальном окне при нажатии на кнопки 
+                    из списка в блоке "Акции", а так же на кнопку "Записаться на пробное занятие
+                    в блоке "О клубе";
+                </li>
+                <li class="about-site__stack-list-item">
+                    &#128073; Для поля ввода телефона в модальном окне заказа абонемента реализованна маска;
+                </li>
+                <li class="about-site__stack-list-item">
+                    &#128073; Реализована имитация показа статуса отправки данных с формы модального окна на сервер.
+                    Для теста отправки данных сайт нужен локальный сервер типа MAMP, введенные данные
+                    отобразятся в консоли. Для просмотра сообщений о статусе отправки сервер запускать не
+                    обязательно (просто игнорируем ошибку POST запроса);
+                </li>
+                <li class="about-site__stack-list-item">
+                    &#128073; Реализован таймер окончания Акций;
+                </li>
+                <li class="about-site__stack-list-item">
+                    &#128073; Реализован переход на выбранный блок информации на странице при нажатии на кнопки меню;
+                </li>
+            </ul>
+
+            <div class="about-site__contacts-block">
+                <p>
+                    &#9889; <b>Ссылка на GitHub:</b>
+                    <a class='about-site__github-link' href='https://github.com/vv-tomilin/fitness_js_native'>
+                      <br/>https://github.com/vv-tomilin/fitness_js_native
+                    </a>
+                  </p>
+          
+                  <div class='about-site__contacts'>
+                    <h2 class='about-site__contacts-subtitle'>Контакты:</h2>
+                    <ul>
+                      <li class='about-site__contacts-item'>
+                        <span>Email</span>: &nbsp;
+                        <a href='mailto:backatom1@gmail.com'>backatom1@gmail.com</a>
+                      </li>
+                      <li class='about-site__contacts-item'>
+                        <span>WhatsApp, Viber</span>: &nbsp;
+                        <a href='https://wa.me/79619649736 '>+79619649736</a> (без звонков)
+                      </li>
+                      <li class='about-site__contacts-item'>
+                        <span>Telegram</span>: &nbsp;
+                        <a href='tg://resolve?domain=@vv_tomilin'>@vv_tomilin</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contaiter">
+            <h2 class="visually-hidden">Подвал сайта</h2>
+                <div class="footer__logo-social-wrapper">
+                    <div class="footer__logo footer__logo--other-views">
+                        <img src="img/logo-white.svg" alt="logo"/>
+                    </div>
+                    <div class="footer__social">
+                        <div class="footer__logo footer__logo--tablet ">
+                            <img src="img/logo-white.svg" alt="logo"/>
+                        </div>
+                        <h3 class="footer__social-title">Мы в социальных сетях</h3>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a href="https://www.twitter.com">
+                                    <img src="img/twitter.svg" alt="">
+                                </a>
+                                <p class="visually-hidden">Твиттер</p>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="https://www.instagram.com">
+                                    <img src="img/instagram.svg" alt="">
+                                </a>
+                                <p class="visually-hidden">Инстаграм</p>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="https://www.vk.com">
+                                    <img src="img/vk.svg" alt="">
+                                </a>
+                                <p class="visually-hidden">Вконтакте</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="" class="footer__about-web-site footer__about-web-site--desktop">
+                        О сайте
+                    </a>
+                </div>
+            <a href="" class="footer__about-web-site footer__about-web-site--other-views">
+                О сайте
+            </a>
+        </div>
+        <p class="footer__copyright">Copyright 2021 ©</p>
+    </footer>
+
+    <div class="popup popup--hide">
+        <div class="popup__dialog">
+            <div class="popup__content">
+                <button type="button" class="popup__close"><strong>&times;</strong></button>
+                <div class="popup__form">
+                    <form class="form" action="#">
+                        <h2 class="form__title">Заказ абонемента</h2>
+                        <input class="form__input" name="user_name" required type="text" placeholder="Введите ваше имя">
+                        <input class="form__input" name="user_phone" required type="text" placeholder="Введите телефон">
+                        <select id="abonement-select" class="form__input form__select" name="abonement-type">
+                            <option selected hidden value="0">Выберите абонемент</option>
+                            <option value="1">12 месяцев безлимит студент 3299 ₽</option>
+                            <option value="2">6 месяцев безлимит +3 персональные тренировки 2499 ₽</option>
+                            <option value="3">6 персональных тренировок 2999 ₽</option>
+                            <option value="4">12 месяцев безлимит 4499 ₽</option>
+                            <option value="5">4 месяца безлимит 2099 ₽</option>
+                            <option value="6">Пробное занятие</option>
+                            <option value="7">Другое</option>
+                        </select>
+                        <select id="addresses-select" class="form__input form__select" name="addresses">
+                            <option selected hidden value="0">Выберите филиал</option>
+                            <option value="1">Пермь, ул.Баумана, 12</option>
+                            <option value="2">Пермь, ул.Ленина, 64</option>
+                            <option value="3">Пермь, ул.КИМ, 61</option>
+                        </select>
+                        <button class="form__button button" name="submit" type="submit">Отправить заявку</button>
+                        <p class="form__notice">Нажимая "Отправить заявку", я даю согласие на обработку персональных данных</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-status popup--hide">
+            <div class="form-status__loading form-status__item popup--hide">
+                <img src="img/loading.gif" alt="">
+                <p>Отправка на сервер...</p>
+            </div>
+            <div class="form-status__success form-status__item popup--hide">
+                <img src="img/success.svg" alt="">
+                <p>Спасибо! Мы с вами скоро свяжемся.</p>
+            </div>
+            <div class="form-status__failure form-status__item popup--hide">
+                <img src="img/failure.svg" alt="">
+                <p>Что-то пошло не так...</p>
+                <p>
+                    Проверьте ваш интеренет<br/>
+                    и попробуйте снова!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
