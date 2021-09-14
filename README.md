@@ -1,7 +1,7 @@
 ***Проект сайта для Спорт-клуба***
 
 **Посмотреть готовый сайт:**
-&#128073; [https://fitness-js-vv-tomilin.000webhostapp.com/]
+<br/>&#128073; [https://fitness-js-vv-tomilin.000webhostapp.com/]
 
 * __Commit 1__ - сделал базовую _HTML_ верстку страницы, проверил на валидность;  
 <br/>
